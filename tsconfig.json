@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "extends": "@vue/tsconfig/tsconfig.dom.json",
+    "target": "ESNext",
+    "module": "ESNext",
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "importsNotUsedAsValues": "remove",
+    "verbatimModuleSyntax": false,
+    "ignoreDeprecations": "5.0",
+    "skipLibCheck": true,
+    "isolatedModules": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "references": [
+  ]
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=<Service Description>
+After=network.target
+
+[Service]
+#you can watch additional files/directories for changes with --watch option eg. --watch /dir1 --watch /dir2/script.js
+ExecStart=nodemon <absolute path to server.js>
+Restart=always
+Type=simple
+#make sure user has permissions to run server.js
+User=dev
+#point to node install dir, current value should work for most normal linux setups
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=<absolute path to directory server.js is located in>
+
+[Install]
+WantedBy=multi-user.target
